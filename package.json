@@ -1,0 +1,21 @@
+{
+  "name": "quanturban-web",
+  "version": "1.0.0",
+  "description": "quanturban website",
+  "main": "index.js",
+  "repository": "git@github.com:leiii/quanturban-web.git",
+  "author": "quanturban",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "vuepress dev src",
+    "build": "vuepress build src",
+    "lint": "eslint --ext .js,.vue src/"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.0",
+    "postcss-loader": "^3.0.0",
+    "vuepress": "^1.3.0"
+  }
+}
