@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "start": "vuepress dev src",
-    "build": "vuepress build src",
+    "build": "vuepress build src -d dist --no-cache",
     "lint": "eslint --ext .js,.vue src/"
   },
   "devDependencies": {
