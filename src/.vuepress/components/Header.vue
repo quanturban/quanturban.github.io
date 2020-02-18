@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <a class="logo" href="/">
-      <img class="logo-img" :src="$withBase('/logo-v1.png')" alt="Quanturban">
+      <img class="logo-img" :src="$withBase('logo-v1.png')" alt="Quanturban">
     </a>
     <nav class="nav">
       <ul class="nav-list">
