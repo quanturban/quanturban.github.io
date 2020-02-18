@@ -7,16 +7,16 @@
       </div>
       <div class="right">
         <a class="icon" href="https://github.com/quanturban" target="_blank">
-          <img :src="$withBase('icon-github.png')" alt="github">
+          <img :src="$withBase('/icon-github.png')" alt="github">
         </a>
         <div class="icon">
-          <img :src="$withBase('icon-wechat.png')" alt="github">
+          <img :src="$withBase('/icon-wechat.png')" alt="github">
         </div>
         <a class="icon" href="ttps://zhuanlan.zhihu.com/datahammer" target="_blank">
-          <img :src="$withBase('icon-zhihu.png')" alt="zhihu">
+          <img :src="$withBase('/icon-zhihu.png')" alt="zhihu">
         </a>
         <a class="icon" href="https://weibo.com/quanturban" target="_blank">
-          <img :src="$withBase('icon-weibo.png')" alt="weibo">
+          <img :src="$withBase('/icon-weibo.png')" alt="weibo">
         </a>
       </div>
     </div>
