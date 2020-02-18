@@ -1,21 +1,21 @@
 <template>
   <header class="header">
-    <a class="logo" href="/">
+    <router-link class="logo" to="/">
       <img class="logo-img" :src="$withBase('/logo-v1.png')" alt="Quanturban">
-    </a>
+    </router-link>
     <nav class="nav">
       <ul class="nav-list">
         <li class="nav-item">
-          <a :href="$withBase('/')" class="nav-link">首页</a>
+          <router-link to="/" class="nav-link">首页</router-link>
         </li>
         <li class="nav-item">
-          <a :href="$withBase('/consulting/')" class="nav-link">咨询项目</a>
+          <router-link to="/consulting/" class="nav-link">咨询项目</router-link>
         </li>
         <li class="nav-item">
-          <a :href="$withBase('/contact/')" class="nav-link">联系我们</a>
+          <router-link to="/contact/" class="nav-link">联系我们</router-link>
         </li>
         <li class="nav-item">
-          <a :href="$withBase('/about/')" class="nav-link">关于</a>
+          <router-link to="/about/" class="nav-link">关于</router-link>
         </li>
       </ul>
     </nav>

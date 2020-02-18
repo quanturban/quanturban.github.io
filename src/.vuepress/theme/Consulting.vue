@@ -5,7 +5,7 @@
         <div v-for="(card, index) in data.cards" :key="index" class="card">
           <header class="header">
             <div class="bg">
-              <img class="bg-img" :src="$withBase(`/${card.img}`)">
+              <img loading="lazy" class="bg-img" :src="$withBase(`/${card.img}`)">
             </div>
             <div class="sub">
               <p class="type">{{ card.type }}</p>
