@@ -22,6 +22,9 @@ export default {
 
 <style lang="stylus">
 @import "../styles/variables"
+body
+  background-color #01030D
+
 .page-layout
   color #fff
   background linear-gradient(0deg, #01030D, #01030D), linear-gradient(359.69deg, rgba(0, 0, 0, 2e-05) 32.78%, rgba(0, 0, 0, 0.2) 96.69%)

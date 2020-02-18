@@ -6,16 +6,16 @@
     <nav class="nav">
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="/" class="nav-link">首页</a>
+          <a :href="$withBase('/')" class="nav-link">首页</a>
         </li>
         <li class="nav-item">
-          <a href="/consulting/" class="nav-link">咨询项目</a>
+          <a :href="$withBase('/consulting/')" class="nav-link">咨询项目</a>
         </li>
         <li class="nav-item">
-          <a href="/contact/" class="nav-link">联系我们</a>
+          <a :href="$withBase('/contact/')" class="nav-link">联系我们</a>
         </li>
         <li class="nav-item">
-          <a href="/about/" class="nav-link">关于</a>
+          <a :href="$withBase('/about/')" class="nav-link">关于</a>
         </li>
       </ul>
     </nav>
