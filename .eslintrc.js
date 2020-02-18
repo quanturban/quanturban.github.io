@@ -7,5 +7,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:vue/recommended'
   ],
-  rules: {}
+  rules: {
+    'vue/singleline-html-element-content-newline': 0
+  }
 }

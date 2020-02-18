@@ -21,11 +21,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-@import "~normalize.css";
-*
-*::before
-*::after
-  box-sizing border-box
-</style>
