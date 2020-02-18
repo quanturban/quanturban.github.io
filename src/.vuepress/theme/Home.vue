@@ -1,10 +1,12 @@
 <template>
   <PageLayout>
-    <div class="home">
-      <h1 class="title">
-        {{ data.title }}
+    <div class="main">
+      <h1 class="slogan">
+        {{ data.slogan }}
       </h1>
-      <Content slot-key="content" />
+      <p>
+        {{ data.text }}
+      </p>
     </div>
   </PageLayout>
 </template>
@@ -25,7 +27,16 @@ export default {
 
 <style lang="stylus" scoped>
 @import "../styles/variables"
-.title
-  color $color
+
+.main
+  padding-left 60px
+  padding-right 60px
+  margin-bottom 70px
+
+@media (max-width: $sm)
+  .main
+    padding-left 20px
+    padding-right 20px
+    margin-bottom 40px
 </style>
 

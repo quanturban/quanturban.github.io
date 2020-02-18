@@ -8,6 +8,7 @@ module.exports = {
     'plugin:vue/recommended'
   ],
   rules: {
-    'vue/singleline-html-element-content-newline': 0
+    'vue/singleline-html-element-content-newline': 0,
+    'vue/max-attributes-per-line': 0
   }
 }

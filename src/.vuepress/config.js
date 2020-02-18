@@ -1,3 +1,4 @@
 module.exports = {
-  title: 'quanturban'
+  title: '量城科技',
+  lang: 'zh-cmn-Hans'
 }
