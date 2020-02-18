@@ -31,49 +31,48 @@ export default {
 <style lang="stylus" scoped>
 @import "../styles/variables"
 .header
-  color #fff
   display flex
-  height 80px
   align-items center
   justify-content space-between
-  padding-left 80px
-  padding-right 80px
+  color #fff
+  height 60px
+  padding-left 20px
+  padding-right 20px
 
 .logo
-  width 150px
+  width 30px
+  overflow hidden
 
 .nav
 .nav-list
   height 100%
+
+.logo-img
+  max-width 150px
+
+.nav-link
+  color #fff
+  font-size 14px
+  font-weight 500
 
 .nav-list
   display flex
   align-items center
 
 .nav-item + .nav-item
-  margin-left 40px
-
-.nav-link
-  color #fff
-  font-size 13px
-
-@media (max-width: $sm)
+  margin-left 20px
+@media (min-width: $md)
   .header
-    height 60px
-    padding-left 20px
-    padding-right 20px
+    height 80px
+    padding-left 80px
+    padding-right 80px
 
   .logo
-    width 30px
-    overflow hidden
-
-  .logo-img
-    max-width 150px
-
-  .nav-link
-    font-size 14px
-    font-weight 500
+    width 150px
 
   .nav-item + .nav-item
-    margin-left 20px
+    margin-left 40px
+
+  .nav-link
+    font-size 13px
 </style>
