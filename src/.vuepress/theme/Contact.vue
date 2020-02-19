@@ -1,15 +1,9 @@
 <template>
-  <PageLayout>
-    <div class="main">contact</div>
-  </PageLayout>
+  <div class="main">contact</div>
 </template>
 
 <script>
-import PageLayout from './PageLayout'
 export default {
-  components: {
-    PageLayout
-  }
 
 }
 </script>

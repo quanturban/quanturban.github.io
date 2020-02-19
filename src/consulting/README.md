@@ -1,5 +1,6 @@
 ---
-layout: consulting
+layout: PageLayout
+page: Consulting
 title: 咨询项目
 cards:
   - title: 土地价值潜力预测

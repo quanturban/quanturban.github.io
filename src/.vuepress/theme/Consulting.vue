@@ -1,37 +1,31 @@
 <template>
-  <PageLayout>
-    <div class="main">
-      <div class="card-list">
-        <div v-for="(card, index) in data.cards" :key="index" class="card">
-          <header class="header">
-            <div class="bg">
-              <img loading="lazy" class="bg-img" :src="$withBase(`/${card.img}`)">
-            </div>
-            <div class="sub">
-              <p class="type">{{ card.type }}</p>
-              <h2 class="title">{{ card.title }}</h2>
-            </div>
-          </header>
-          <p class="desc">{{ card.desc }}</p>
-          <p class="feedback">
-            <span class="icon-star">&#10024;</span>
-            {{ card.highlight }}
-          </p>
-          <footer class="footer">
-            <a :href="card.href" target="_blank" class="btn">查看详情</a>
-          </footer>
-        </div>
+  <div class="main">
+    <div class="card-list">
+      <div v-for="(card, index) in data.cards" :key="index" class="card">
+        <header class="header">
+          <div class="bg">
+            <img loading="lazy" class="bg-img" :src="$withBase(`/${card.img}`)">
+          </div>
+          <div class="sub">
+            <p class="type">{{ card.type }}</p>
+            <h2 class="title">{{ card.title }}</h2>
+          </div>
+        </header>
+        <p class="desc">{{ card.desc }}</p>
+        <p class="feedback">
+          <span class="icon-star">&#10024;</span>
+          {{ card.highlight }}
+        </p>
+        <footer class="footer">
+          <a :href="card.href" target="_blank" class="btn">查看详情</a>
+        </footer>
       </div>
     </div>
-  </PageLayout>
+  </div>
 </template>
 
 <script>
-import PageLayout from './PageLayout'
 export default {
-  components: {
-    PageLayout
-  },
   computed: {
     data () {
       return this.$frontmatter

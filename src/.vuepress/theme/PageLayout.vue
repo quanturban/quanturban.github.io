@@ -1,9 +1,7 @@
 <template>
   <div class="page-layout">
     <Header />
-    <div class="page">
-      <slot />
-    </div>
+    <component :is="page" class="page" />
     <Footer />
   </div>
 </template>
@@ -11,11 +9,31 @@
 <script>
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Home from './Home'
+import Consulting from './Consulting'
+import Contact from './Contact'
+
+const pages = {
+  Home,
+  Consulting,
+  Contact
+}
 
 export default {
   components: {
     Header,
-    Footer
+    Footer,
+    ...pages
+  },
+  computed: {
+    data () {
+      return this.$frontmatter
+    },
+    page () {
+      const page = this.$frontmatter.page
+
+      return pages[page]
+    }
   }
 }
 </script>
@@ -27,7 +45,6 @@ body
 
 .page-layout
   color #fff
-  background linear-gradient(0deg, #01030D, #01030D), linear-gradient(359.69deg, rgba(0, 0, 0, 2e-05) 32.78%, rgba(0, 0, 0, 0.2) 96.69%)
 
 @media (min-width $xxl)
   .page

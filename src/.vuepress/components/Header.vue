@@ -14,9 +14,9 @@
         <li class="nav-item">
           <router-link to="/contact/" class="nav-link" :class="{active: isActive('/contact/')}">联系我们</router-link>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <router-link to="/about/" class="nav-link" :class="{active: isActive('/about/')}">关于</router-link>
-        </li>
+        </li> -->
       </ul>
     </nav>
   </header>
@@ -59,6 +59,7 @@ export default {
   font-size 14px
   font-weight 500
   letter-spacing 1.5px
+  transition color .3s
 
 .nav-link.active
   color #F3DB60

@@ -1,42 +1,39 @@
 <template>
-  <PageLayout>
-    <div class="main">
-      <section class="hero">
-        <h1 class="slogan">
-          {{ data.slogan }}
-        </h1>
-        <p class="text">
-          {{ data.text }}
-        </p>
-      </section>
-      <div class="products">
-        <div v-for="(item, index) in data.products" :key="index" class="card">
-          <h2 class="title" :style="{color: colors[index], borderColor: colors[index] }">{{ item.title }}</h2>
-          <div class="img-wrap">
-            <img :src="$withBase(item.img)" :alt="item.name">
+  <div class="main">
+    <section class="hero">
+      <h1 class="slogan">
+        {{ data.slogan }}
+      </h1>
+      <p class="text">
+        {{ data.text }}
+      </p>
+    </section>
+    <div class="products">
+      <div v-for="(item, index) in data.products" :key="index" class="card">
+        <h2 class="title" :style="{color: colors[index], borderColor: colors[index] }">{{ item.title }}</h2>
+        <div class="img-wrap">
+          <img :src="$withBase(item.img)" :alt="item.name">
+        </div>
+        <div class="footer">
+          <div class="left">
+            <h3 class="name">{{ item.name }}</h3>
+            <p class="desc">{{ item.desc }}</p>
           </div>
-          <div class="footer">
-            <div class="left">
-              <h3 class="name">{{ item.name }}</h3>
-              <p class="desc">{{ item.desc }}</p>
-            </div>
-            <div class="right">
-              <a :href="item.href" target="_blank" class="link">查看 <IconArrow /></a>
-            </div>
+          <div class="right">
+            <a :href="item.href" target="_blank" class="link">查看 <IconArrow /></a>
           </div>
         </div>
       </div>
     </div>
-  </PageLayout>
+  </div>
 </template>
 
 <script>
-import PageLayout from './PageLayout'
 import IconArrow from '../public/icon-arrow-right.svg'
 
 export default {
+  name: 'Home',
   components: {
-    PageLayout,
     IconArrow
   },
   computed: {
@@ -53,7 +50,9 @@ export default {
 @import "../styles/variables"
 @media (min-width: $xxl)
   .page-layout
-    background url('/home-bg.png') no-repeat top center
+    background-image url('/home-bg.png')
+    background-repeat no-repeat
+    background-position top center
     background-size 1000px
 </style>
 
