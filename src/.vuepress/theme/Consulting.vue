@@ -15,10 +15,10 @@
           <p class="desc">{{ card.desc }}</p>
           <p class="feedback">
             <span class="icon-star">&#10024;</span>
-            {{ card.feedback }}
+            {{ card.highlight }}
           </p>
           <footer class="footer">
-            <button class="btn">查看详情</button>
+            <a :href="card.href" target="_blank" class="btn">查看详情</a>
           </footer>
         </div>
       </div>
@@ -61,6 +61,9 @@ export default {
 .header
   position relative
 
+.bg
+  text-align center
+
 .bg-img
   border-top-left-radius 8px
   border-top-right-radius 8px
@@ -95,16 +98,15 @@ export default {
   display flex
 
 .icon-star
-  margin-right 25px
+  margin-right 20px
   font-size 20px
 
 .footer
-  margin-top 20px
   padding-left 20px
   padding-right 20px
   width 100%
   position absolute
-  bottom 30px
+  bottom 20px
 
 .btn
   color #1A1B24
@@ -117,7 +119,7 @@ export default {
   border none
   outline none
   cursor pointer
-
+  display inline-block
 
 @media (min-width $md)
   .main
@@ -133,6 +135,9 @@ export default {
 
   .card + .card
     margin-top 0
+
+  .footer
+    bottom 30px
 
   .card-list
     display flex

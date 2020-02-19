@@ -6,17 +6,14 @@
         <div class="name">量城科技</div>
       </div>
       <div class="right">
-        <a class="icon" href="https://github.com/quanturban" target="_blank">
-          <img :src="$withBase('/icon-github.png')" alt="github">
-        </a>
-        <div class="icon">
-          <img :src="$withBase('/icon-wechat.png')" alt="github">
-        </div>
-        <a class="icon" href="ttps://zhuanlan.zhihu.com/datahammer" target="_blank">
-          <img :src="$withBase('/icon-zhihu.png')" alt="zhihu">
-        </a>
-        <a class="icon" href="https://weibo.com/quanturban" target="_blank">
-          <img :src="$withBase('/icon-weibo.png')" alt="weibo">
+        <a
+          v-for="item in config.socialMedias"
+          :key="item.name"
+          :href="item.href"
+          class="icon"
+          target="_blank"
+        >
+          <img :src="$withBase(item.icon)" :alt="item.name">
         </a>
       </div>
     </div>
