@@ -6,16 +6,16 @@
     <nav class="nav">
       <ul class="nav-list">
         <li class="nav-item">
-          <router-link to="/" class="nav-link">首页</router-link>
+          <router-link to="/" class="nav-link" :class="{active: isActive('/')}">首页</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/consulting/" class="nav-link">咨询项目</router-link>
+          <router-link to="/consulting/" class="nav-link" :class="{active: isActive('/consulting/')}">咨询项目</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/contact/" class="nav-link">联系我们</router-link>
+          <router-link to="/contact/" class="nav-link" :class="{active: isActive('/contact/')}">联系我们</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/about/" class="nav-link">关于</router-link>
+          <router-link to="/about/" class="nav-link" :class="{active: isActive('/about/')}">关于</router-link>
         </li>
       </ul>
     </nav>
@@ -24,7 +24,11 @@
 
 <script>
 export default {
-
+  methods: {
+    isActive (url) {
+      return this.$route.path === url
+    }
+  }
 }
 </script>
 
@@ -54,6 +58,10 @@ export default {
   color #fff
   font-size 14px
   font-weight 500
+  letter-spacing 1.5px
+
+.nav-link.active
+  color #F3DB60
 
 .nav-list
   display flex

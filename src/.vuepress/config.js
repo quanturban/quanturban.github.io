@@ -10,14 +10,14 @@ module.exports = {
     copyright: '© 2015-2020 北京量城科技有限公司 | 京ICP备17019839号-4',
     socialMedias: [
       {
-        name: 'github',
-        icon: '/icon-github.png',
-        href: 'https://github.com/quanturban'
-      },
-      {
         name: 'wechat',
         icon: '/icon-wechat.png',
         img: '/wechat-qr.jpg'
+      },
+      {
+        name: 'weibo',
+        icon: '/icon-weibo.png',
+        href: 'https://weibo.com/quanturban'
       },
       {
         name: 'zhihu',
@@ -25,9 +25,9 @@ module.exports = {
         href: 'https://zhuanlan.zhihu.com/datahammer'
       },
       {
-        name: 'weibo',
-        icon: '/icon-weibo.png',
-        href: 'https://weibo.com/quanturban'
+        name: 'github',
+        icon: '/icon-github.png',
+        href: 'https://github.com/quanturban'
       }
     ],
     smoothScroll: true

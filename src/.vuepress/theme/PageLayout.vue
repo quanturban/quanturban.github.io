@@ -28,4 +28,10 @@ body
 .page-layout
   color #fff
   background linear-gradient(0deg, #01030D, #01030D), linear-gradient(359.69deg, rgba(0, 0, 0, 2e-05) 32.78%, rgba(0, 0, 0, 0.2) 96.69%)
+
+@media (min-width $xxl)
+  .page
+    width $xxl
+    margin-left auto
+    margin-right auto
 </style>
