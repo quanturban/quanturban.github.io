@@ -13,7 +13,8 @@
           class="icon"
           target="_blank"
         >
-          <img :src="$withBase(item.icon)" :alt="item.name">
+          <img :src="$withBase(item.icon)" :alt="item.name" class="icon-img">
+          <img v-if="item.img" :src="$withBase(item.img)" :alt="item.name" class="hidden-img">
         </a>
       </div>
     </div>
@@ -45,7 +46,6 @@ export default {
 
 .footer
   color #fff
-  opacity 0.75
   border-top 1px solid rgba(255, 255, 255, 0.2)
   height 110px
   padding 30px 20px 20px
@@ -54,8 +54,13 @@ export default {
   display flex
 
 .left
+  transition all .3s
+  opacity 0.75
   display flex
   align-items center
+
+.left:hover
+  opacity 1
 
 .right
   flex: auto
@@ -72,14 +77,36 @@ export default {
   font-weight 500
 
 .icon
+  cursor pointer
+  position relative
   width 25px
+
+.icon-img
+  transition all .3s
+  opacity 0.75
+
+.icon:hover .hidden-img
+  display block
+
+.icon:hover .icon-img
+  opacity 1
 
 .block + .block
   margin-top 20px
 
 .copyright
+  opacity 0.75
   font-size 11px
   justify-content center
+
+.hidden-img
+  position absolute
+  bottom 30px
+  left 50%
+  transform translateX(-50%)
+  max-width initial
+  width 120px
+  display none
 
 @media (min-width $md)
   .footer

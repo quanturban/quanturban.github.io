@@ -17,7 +17,7 @@ module.exports = {
       {
         name: 'wechat',
         icon: '/icon-wechat.png',
-        qr: ''
+        img: '/wechat-qr.jpg'
       },
       {
         name: 'zhihu',
