@@ -48,6 +48,7 @@ export default {
   box-shadow 0px 4px 8px rgba(0, 0, 0, 0.1)
   background #191919
   border-radius 8px
+  padding-bottom 70px
 
 .card + .card
   margin-top 30px
