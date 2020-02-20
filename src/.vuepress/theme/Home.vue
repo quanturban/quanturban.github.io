@@ -46,15 +46,6 @@ export default {
   }
 }
 </script>
-<style lang="stylus">
-@import "../styles/variables"
-@media (min-width: $xxl)
-  .page-layout
-    background-image url('/home-bg.png')
-    background-repeat no-repeat
-    background-position top center
-    background-size 1000px
-</style>
 
 <style lang="stylus" scoped>
 @import "../styles/variables"

@@ -1,5 +1,5 @@
 <template>
-  <div class="page-layout">
+  <div class="page-layout" :class="page.name">
     <Header />
     <component :is="page" class="page" />
     <Footer />
@@ -51,4 +51,10 @@ body
     width $xxl
     margin-left auto
     margin-right auto
+
+  .page-layout.Home
+    background-image url('/home-bg.png')
+    background-repeat no-repeat
+    background-position top center
+    background-size 1000px
 </style>
