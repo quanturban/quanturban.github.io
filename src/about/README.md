@@ -1,5 +1,5 @@
 ---
 layout: PageLayout
-page: about
+page: About
 title: 关于
 ---
