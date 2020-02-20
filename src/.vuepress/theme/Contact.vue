@@ -198,17 +198,19 @@ export default {
     padding-left 80px
 
   .form
-    width 400px
+    width 360px
 
   .contact
     flex 0 1 600px
-    padding-top 100px
+    padding-top 140px
+
+  .contact-item + .contact-item
+    margin-top 40px
 
   .title
     display block
-    font-size 24px
+    font-size 34px
     font-weight 600
     letter-spacing 1px
-
-
+    margin-bottom 40px
 </style>
