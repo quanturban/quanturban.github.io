@@ -19,10 +19,10 @@ products:
     name: 数据市场
     desc: 优质城市数据供给平台
     img: /product-data-market.png
-    href: https://mapmiao.com/
+    href: https://data.mapmiao.com/
   - title: 疫情地图
     name: 疫情场所地图
     desc: 小区级城市疫情地图
     img: /product-ncov-map.png
-    href: https://mapmiao.com/
+    href: https://mapmiao.com/ncov/
 ---

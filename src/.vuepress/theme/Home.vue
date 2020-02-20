@@ -127,6 +127,12 @@ export default {
   font-weight 500
   display flex
   align-items center
+  transition all .3s
+
+.link:hover
+.link:hover svg
+  color #3576ff
+  fill #3576ff
 
 @media (min-width $xl)
   .main
