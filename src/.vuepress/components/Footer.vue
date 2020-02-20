@@ -105,7 +105,7 @@ export default {
   left 50%
   transform translateX(-50%)
   max-width initial
-  width 120px
+  width 160px
   display none
 
 @media (min-width $md)

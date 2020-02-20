@@ -128,7 +128,7 @@ export default {
   display flex
   align-items center
 
-@media (min-width: $xxl)
+@media (min-width $xl)
   .main
     padding-left 60px
     padding-right 60px
@@ -143,7 +143,7 @@ export default {
 
   .products
     background none
-    padding-top 290px
+    padding-top 248px
     display flex
     align-items center
     justify-content space-between
@@ -164,6 +164,10 @@ export default {
     border-radius 29px
     padding 13px 20px
     letter-spacing 3px
+
+@media (min-width $xxl)
+  .products
+    padding-top 290px
 
 </style>
 

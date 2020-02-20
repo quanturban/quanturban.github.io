@@ -48,6 +48,13 @@ body
 .page-layout
   color #fff
 
+@media (min-width $xl)
+  .page-layout.Home
+    background-image url($baseUrl + 'home-bg.png')
+    background-repeat no-repeat
+    background-position top center
+    background-size 900px
+
 @media (min-width $xxl)
   .page
     width $xxl

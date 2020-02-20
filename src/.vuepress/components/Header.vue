@@ -44,15 +44,16 @@ export default {
   padding-right 20px
 
 .logo
-  width 30px
-  overflow hidden
+  flex 0 1 auto
+  max-width 150px
+
+.nav
+  padding-left 10px
+  flex 1 0 auto
 
 .nav
 .nav-list
   height 100%
-
-.logo-img
-  max-width 150px
 
 .nav-link
   color #fff
@@ -67,6 +68,7 @@ export default {
 .nav-list
   display flex
   align-items center
+  justify-content flex-end
 
 .nav-item + .nav-item
   margin-left 20px
@@ -75,9 +77,6 @@ export default {
     height 80px
     padding-left 80px
     padding-right 80px
-
-  .logo
-    width 150px
 
   .nav-item + .nav-item
     margin-left 40px
