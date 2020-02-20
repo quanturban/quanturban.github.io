@@ -6,6 +6,7 @@
         <div class="form-row">
           <label for="type-select" class="label">类型</label>
           <VueSelect
+            v-model="formData['type']"
             :searchable="false"
             :clearable="false"
             class="form-select"
@@ -16,18 +17,18 @@
         </div>
         <div class="form-row">
           <label for="name" class="label">姓名</label>
-          <input type="text" name="name" class="input" required>
+          <input v-model="formData['name']" type="text" name="name" class="input" required>
         </div>
         <div class="form-row">
           <label for="contact" class="label">联系方式</label>
-          <input type="text" name="contact" class="input" required>
+          <input v-model="formData['contact']" type="text" name="contact" class="input" required>
         </div>
         <div class="form-row">
           <label for="content" class="label">内容</label>
-          <textarea class="textarea" name="content" required />
+          <textarea v-model="formData['content']" class="textarea" name="content" required />
         </div>
         <footer class="form-footer">
-          <button type="button" class="submit-btn">提交</button>
+          <button @click="submit" type="button" class="submit-btn">提交</button>
         </footer>
       </form>
     </div>
@@ -64,9 +65,19 @@ export default {
     IconEmail,
     IconLocation
   },
+  data () {
+    return {
+      formData: {}
+    }
+  },
   computed: {
     data () {
       return this.$frontmatter
+    }
+  },
+  methods: {
+    submit () {
+      console.log(this.formData)
     }
   }
 }
