@@ -12,17 +12,19 @@ import Footer from '../components/Footer'
 import Home from './Home'
 import Consulting from './Consulting'
 import Contact from './Contact'
+import PageNotFound from './404'
 
 const pages = {
   Home,
   Consulting,
-  Contact
+  Contact,
 }
 
 export default {
   components: {
     Header,
     Footer,
+    PageNotFound,
     ...pages
   },
   computed: {
@@ -32,7 +34,7 @@ export default {
     page () {
       const page = this.$frontmatter.page
 
-      return pages[page]
+      return pages[page] || PageNotFound
     }
   }
 }
