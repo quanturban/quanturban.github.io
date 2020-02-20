@@ -17,7 +17,11 @@
           {{ card.highlight }}
         </p>
         <footer class="footer">
-          <a :href="card.href" target="_blank" class="btn">查看详情</a>
+          <a v-if="card.href" :href="card.href" target="_blank" class="btn">
+            <div class="btn-text">查看详情</div>
+            <IconArrow class="btn-icon" />
+          </a>
+          <router-link v-else class="btn-sec" to="/contact/">联系我们</router-link>
         </footer>
       </div>
     </div>
@@ -25,7 +29,11 @@
 </template>
 
 <script>
+import IconArrow from '../public/icon-arrow-right-thin.svg'
 export default {
+  components: {
+    IconArrow
+  },
   computed: {
     data () {
       return this.$frontmatter
@@ -104,6 +112,8 @@ export default {
   bottom 20px
 
 .btn
+.btn-sec
+  position relative
   color #1A1B24
   text-align center
   font-size 14px
@@ -115,6 +125,27 @@ export default {
   outline none
   cursor pointer
   display inline-block
+  transition all .3s
+
+.btn:hover
+  background linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), #73D98C
+  padding-right 30px
+
+.btn-icon
+  position absolute
+  right 8px
+  top 50%
+  transform translateY(-50%)
+  opacity 0
+
+.btn:hover .btn-icon
+  opacity 1
+
+.btn-sec
+  background #DDEEFC
+
+.btn-sec:hover
+  background #e7f4fe
 
 @media (min-width $md)
   .main
