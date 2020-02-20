@@ -53,7 +53,7 @@ body
     margin-right auto
 
   .page-layout.Home
-    background-image url('/home-bg.png')
+    background-image url($baseUrl + 'home-bg.png')
     background-repeat no-repeat
     background-position top center
     background-size 1000px

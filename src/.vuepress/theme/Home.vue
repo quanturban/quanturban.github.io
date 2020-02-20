@@ -74,7 +74,7 @@ export default {
 .products
   margin-top 60px
   padding-top 310px
-  background url('/home-bg-mobile.png') no-repeat top center
+  background url($baseUrl + 'home-bg-mobile.png') no-repeat top center
   background-size 168px
 
 .card
