@@ -2,7 +2,7 @@
   <div class="main">
     <div class="form-wrap">
       <h1 class="title">{{ data.title }}</h1>
-      <form action="/" class="form">
+      <form v-if="!submitted" action="/" class="form">
         <div class="form-row">
           <label for="type-select" class="label">类型</label>
           <VueSelect
@@ -28,9 +28,14 @@
           <textarea v-model="formData['content']" class="textarea" name="content" required />
         </div>
         <footer class="form-footer">
-          <button type="button" class="submit-btn" @click="submit">提交</button>
+          <button type="button" class="btn submit-btn" @click="submit">提交</button>
         </footer>
       </form>
+      <div v-else class="form-submitted">
+        <h2 class="submitted-title"><IconCheck /> 已提交</h2>
+        <p class="submitted-text">感谢您的提交，我们收到后会及时处理。如有其他问题，可返回继续提交。</p>
+        <button type="button" class="btn back-btn" @click="back">返回</button>
+      </div>
     </div>
     <div class="contact">
       <h2 class="subtitle">{{ data.subtitle }}</h2>
@@ -58,15 +63,18 @@ import VueSelect from 'vue-select'
 import IconPhone from '../public/icon-phone.svg'
 import IconEmail from '../public/icon-email.svg'
 import IconLocation from '../public/icon-location.svg'
+import IconCheck from '../public/icon-check.svg'
 export default {
   components: {
     VueSelect,
     IconPhone,
     IconEmail,
-    IconLocation
+    IconLocation,
+    IconCheck
   },
   data () {
     return {
+      submitted: false,
       formData: {}
     }
   },
@@ -76,8 +84,20 @@ export default {
     }
   },
   methods: {
+    scrollToTop () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    },
     submit () {
       console.log(this.formData)
+      this.submitted = true
+      this.scrollToTop()
+    },
+    back () {
+      this.submitted = false
+      this.scrollToTop()
     }
   }
 }
@@ -86,6 +106,9 @@ export default {
 <style lang="stylus" scoped>
 @import "~vue-select/dist/vue-select.css"
 @import "../styles/variables"
+
+$color1 = #73D98C
+$color2 = #DDEEFC
 
 .form-wrap
 .contact
@@ -124,7 +147,7 @@ export default {
 
 .input:focus
 .textarea:focus
-  border-color #73D98C
+  border-color $color1
 
 .textarea
   min-height 70px
@@ -132,21 +155,23 @@ export default {
 .form-footer
   margin-top 30px
 
-.submit-btn
+.btn
   cursor pointer
   display block
   width 100%
   color #00020C
   font-size 15px
   font-weight 600
-  background #73D98C
   border-radius 4px
   height 50px
   border none
   transition all .3s
 
+.submit-btn
+  background $color1
+
 .submit-btn:hover
-  background linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), #73D98C
+  background linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), $color1
 
 .form-select
   background rgba(255, 255, 255, 0.1)
@@ -155,7 +180,7 @@ export default {
   transition all .3s
 
 .form-select.vs--open
-  border 1px solid #73D98C
+  border 1px solid $color1
 
 .form-select >>> .vs__dropdown-toggle
   border none
@@ -187,7 +212,7 @@ export default {
   width calc(100% + 2px)
   background #01030d
   border-radius: 4px
-  border 1px solid #73D98C
+  border 1px solid $color1
 
 .form-select >>> .vs__dropdown-option
   font-size 14px
@@ -224,6 +249,28 @@ export default {
   line-height 27px
   margin-left 6%
 
+.submitted-title
+  font-size 19px
+  color $color1
+  margin-bottom 35px
+  display flex
+  align-items center
+
+.submitted-title svg
+  margin-right 12px
+
+.submitted-text
+  font-size 14px
+  line-height 24px
+  letter-spacing 1px
+
+.back-btn
+  background $color2
+  margin-top 60px
+
+.back-btn:hover
+  background linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), $color2
+
 @media (min-width $lg)
   .main
     display flex
@@ -235,7 +282,12 @@ export default {
     padding-left 80px
 
   .form
+  .form-submitted
     width 360px
+
+  .form-submitted
+    height calc(100% - 60px)
+    padding-top 100px
 
   .contact
     flex 0 1 600px
