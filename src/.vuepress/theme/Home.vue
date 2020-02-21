@@ -20,7 +20,11 @@
             <p class="desc">{{ item.desc }}</p>
           </div>
           <div class="right">
-            <a :href="item.href" target="_blank" class="link">查看 <IconArrow /></a>
+            <a v-if="item.href" :href="item.href" target="_blank" class="link">查看 <IconArrow /></a>
+            <span v-else-if="item.qr" target="_blank" class="link">
+              查看 <IconArrow />
+              <img class="hidden-img" :src="$withBase(item.qr)" :alt="item.name">
+            </span>
           </div>
         </div>
       </div>
@@ -121,6 +125,7 @@ export default {
   line-height 20px
 
 .link
+  position relative
   color #5384EC
   letter-spacing 0.6px
   font-size 15px
@@ -128,11 +133,24 @@ export default {
   display flex
   align-items center
   transition all .3s
+  cursor pointer
 
 .link:hover
 .link:hover svg
   color #3576ff
   fill #3576ff
+
+.hidden-img
+  display none
+  position absolute
+  bottom 30px
+  left 50%
+  transform translateX(-50%)
+  max-width initial
+  width 160px
+
+.link:hover .hidden-img
+  display block
 
 @media (min-width $xl)
   .main

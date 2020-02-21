@@ -66,6 +66,7 @@ export default {
 
 .bg
   text-align center
+  min-height 200px
 
 .bg-img
   border-top-left-radius 8px

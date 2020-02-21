@@ -14,7 +14,7 @@ products:
     name: 小区罗盘
     desc: 小区品质评测工具
     img: /product-luopan.png
-    href: https://mapmiao.com/
+    qr: /luopan-qr.jpg
   - title: 数据市场
     name: 数据市场
     desc: 优质城市数据供给平台

@@ -28,7 +28,7 @@
           <textarea v-model="formData['content']" class="textarea" name="content" required />
         </div>
         <footer class="form-footer">
-          <button @click="submit" type="button" class="submit-btn">提交</button>
+          <button type="button" class="submit-btn" @click="submit">提交</button>
         </footer>
       </form>
     </div>
@@ -115,11 +115,16 @@ export default {
   width 100%
   padding 16px 20px
   outline none
-  border none
+  border 1px solid transparent
+  transition all .3s
 
 .input::placeholder
 .textarea::placeholder
   color #999
+
+.input:focus
+.textarea:focus
+  border-color #73D98C
 
 .textarea
   min-height 70px
@@ -138,18 +143,28 @@ export default {
   border-radius 4px
   height 50px
   border none
+  transition all .3s
+
+.submit-btn:hover
+  background linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), #73D98C
 
 .form-select
   background rgba(255, 255, 255, 0.1)
   border-radius: 4px
+  border 1px solid transparent
+  transition all .3s
+
+.form-select.vs--open
+  border 1px solid #73D98C
 
 .form-select >>> .vs__dropdown-toggle
   border none
 
 .form-select >>> .vs__search
   color #fff
-  height 42px
+  height 40px
   border none
+  padding-left 20px
 
 .form-select >>> .vs__search::placeholder
   color #999
@@ -165,8 +180,19 @@ export default {
   font-size 15px
   padding-left 18px
 
+.form-select >>> .vs__dropdown-menu
+  padding 10px 0
+  top 100%
+  left -1px
+  width calc(100% + 2px)
+  background #01030d
+  border-radius: 4px
+  border 1px solid #73D98C
+
 .form-select >>> .vs__dropdown-option
-  padding 8px
+  font-size 14px
+  color #fff
+  padding 10px 20px
 
 .subtitle
   color #95A2B3

@@ -7,7 +7,7 @@ formTypes:
   - 商务合作
   - 产品反馈
   - 产品试用
-  - 求职
+  - 加入我们
   - 其它
 contact:
   - type: tel
