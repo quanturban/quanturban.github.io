@@ -45,6 +45,7 @@ export default {
 @import "../styles/variables"
 
 .footer
+  width 100%
   color #fff
   border-top 1px solid rgba(255, 255, 255, 0.2)
   height 110px
@@ -134,4 +135,9 @@ export default {
   .copyright
     padding-left 20px
 
+@media (min-width $xxl)
+  .footer
+    position absolute
+    bottom 0
+    left 0
 </style>

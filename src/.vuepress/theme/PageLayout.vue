@@ -42,8 +42,19 @@ export default {
 
 <style lang="stylus">
 @import "../styles/variables"
+html
+body
+  height 100%
+
 body
   background-color #01030D
+
+#app
+  position relative
+
+#app
+.page-layout
+  min-height 100%
 
 .page-layout
   color #fff
@@ -56,6 +67,9 @@ body
     background-size 900px
 
 @media (min-width $xxl)
+  .page-layout
+    padding-bottom 110px
+
   .page
     width $xxl
     margin-left auto
