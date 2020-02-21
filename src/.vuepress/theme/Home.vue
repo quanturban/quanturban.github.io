@@ -11,7 +11,7 @@
     <div class="products">
       <div v-for="(item, index) in data.products" :key="index" class="card">
         <h2 class="title" :style="{color: colors[index], borderColor: colors[index] }">{{ item.title }}</h2>
-        <div class="img-wrap">
+        <div class="img-wrap" :style="{backgroundColor: colors[index]}">
           <img :src="$withBase(item.img)" :alt="item.name">
         </div>
         <div class="footer">
@@ -101,6 +101,7 @@ export default {
   word-break keep-all
 
 .img-wrap
+  min-height 200px
   overflow hidden
 
 .img-wrap img

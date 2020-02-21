@@ -102,7 +102,6 @@ export default {
   opacity 0.75
   font-size 11px
   justify-content center
-  padding-left 20px
   line-height 1.6
 
 .hidden-img
@@ -131,5 +130,8 @@ export default {
 
   .right
     flex none
+
+  .copyright
+    padding-left 20px
 
 </style>
