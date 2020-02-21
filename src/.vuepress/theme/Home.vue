@@ -162,6 +162,9 @@ export default {
     padding-right 60px
     margin-bottom 70px
 
+  .hero
+    padding-left 0
+
   .slogan
   .text
     padding-left 40px
