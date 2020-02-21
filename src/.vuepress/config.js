@@ -37,6 +37,7 @@ module.exports = {
     ],
     smoothScroll: true
   },
+  plugins: ['@vuepress/nprogress'],
   chainWebpack (config) {
     const svgRule = config.module.rule('svg')
     svgRule.uses.clear()

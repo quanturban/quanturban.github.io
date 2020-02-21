@@ -75,6 +75,7 @@ export default {
   margin-left: 15px
   font-size 15px
   font-weight 500
+  cursor default
 
 .icon
   cursor pointer
