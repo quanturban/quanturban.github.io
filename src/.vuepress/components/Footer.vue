@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div class="block">
+    <div class="block info">
       <div class="left">
         <Logo />
         <div class="name">量城科技</div>
@@ -53,6 +53,9 @@ export default {
 .block
   display flex
 
+.info
+  flex 1 0 auto
+
 .left
   transition all .3s
   opacity 0.75
@@ -99,6 +102,8 @@ export default {
   opacity 0.75
   font-size 11px
   justify-content center
+  padding-left 20px
+  line-height 1.6
 
 .hidden-img
   position absolute
@@ -123,5 +128,8 @@ export default {
 
   .block + .block
     margin-top 0
+
+  .right
+    flex none
 
 </style>

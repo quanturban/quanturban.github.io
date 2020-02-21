@@ -152,6 +152,10 @@ export default {
 .link:hover .hidden-img
   display block
 
+@media (min-width $md)
+  .hero
+    padding-left 60px
+
 @media (min-width $xl)
   .main
     padding-left 60px
