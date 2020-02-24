@@ -58,7 +58,12 @@ export default {
   },
   methods: {
     showHiddenImage (index) {
-      this.showImages.push(index)
+      if (this.showImages.indexOf(index) !== -1) {
+        const imageIndex = this.showImages.indexOf(index)
+        this.showImages.splice(imageIndex, 1)
+      } else {
+        this.showImages.push(index)
+      }
     }
   }
 }
@@ -175,6 +180,7 @@ export default {
   fill #3576ff
 
 .hidden-img
+  margin-top -10px
   width 180px
 
 @media (min-width $md)
