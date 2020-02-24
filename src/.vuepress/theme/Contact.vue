@@ -265,6 +265,9 @@ $color2 = #DDEEFC
   color #fff
   padding 10px 20px
 
+.form-select.vs--open >>> .vs__selected
+  position static
+
 .subtitle
   color #95A2B3
   font-size 17px
