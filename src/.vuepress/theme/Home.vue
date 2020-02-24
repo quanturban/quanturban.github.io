@@ -189,18 +189,25 @@ export default {
 
   .hero
     padding-left 0
-    margin-top 160px
+    margin-top 150px
 
   .slogan
   .text
     padding-left 40px
 
+  .slogan
+    font-size 56px
+    margin-bottom 30px
+
   .text
-    width 510px
+    width 630px
+    font-size 19px
+    line-height 34px
+    font-weight normal
 
   .products
     background none
-    padding-top 180px
+    padding-top 160px
     display flex
     align-items center
     justify-content space-between
@@ -227,7 +234,7 @@ export default {
 
 @media (min-width $xxl)
   .products
-    padding-top 240px
+    padding-top 220px
 
 </style>
 
