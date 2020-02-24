@@ -13,6 +13,10 @@
         <h2 class="title" :style="{color: colors[index], borderColor: colors[index] }">{{ item.title }}</h2>
         <div class="img-wrap" :style="{backgroundColor: colors[index]}">
           <img :src="$withBase(item.img)" :alt="item.name">
+          <div v-if="item.qr" v-show="showImages.indexOf(index) !== -1" class="hidden-wrap">
+            <img class="hidden-img" :src="$withBase(item.qr)" :alt="item.name">
+            <div v-if="item.qrText" class="qr-text">{{ item.qrText }}</div>
+          </div>
         </div>
         <div class="footer">
           <div class="left">
@@ -21,9 +25,8 @@
           </div>
           <div class="right">
             <a v-if="item.href" :href="item.href" target="_blank" class="link">查看 <IconArrow /></a>
-            <span v-else-if="item.qr" target="_blank" class="link">
+            <span v-else-if="item.qr" class="link" @click="showHiddenImage(index)">
               查看 <IconArrow />
-              <img class="hidden-img" :src="$withBase(item.qr)" :alt="item.name">
             </span>
           </div>
         </div>
@@ -40,12 +43,22 @@ export default {
   components: {
     IconArrow
   },
+  data () {
+    return {
+      showImages: []
+    }
+  },
   computed: {
     data () {
       return this.$frontmatter
     },
     colors () {
       return ['#F3DB60', '#D87058', '#65D093', '#6E91EA']
+    }
+  },
+  methods: {
+    showHiddenImage (index) {
+      this.showImages.push(index)
     }
   }
 }
@@ -72,7 +85,6 @@ export default {
 .text
   color #95A2B3
   font-size 15px
-  font-weight 300
   line-height 23px
 
 .products
@@ -103,9 +115,30 @@ export default {
 .img-wrap
   min-height 200px
   overflow hidden
+  position relative
 
 .img-wrap img
   display block
+
+.hidden-wrap
+  position absolute
+  left 0
+  top 0
+  width 100%
+  height 100%
+  display flex
+  align-items center
+  justify-content center
+  text-align center
+  background #fff
+
+.qr-text
+  position absolute
+  bottom 10px
+  left 50%
+  transform translateX(-50%)
+  color #333
+  font-size 12px
 
 .footer
   display flex
@@ -142,16 +175,7 @@ export default {
   fill #3576ff
 
 .hidden-img
-  display none
-  position absolute
-  bottom 30px
-  left 50%
-  transform translateX(-50%)
-  max-width initial
-  width 160px
-
-.link:hover .hidden-img
-  display block
+  width 180px
 
 @media (min-width $md)
   .hero
@@ -196,6 +220,9 @@ export default {
     border-radius 29px
     padding 13px 20px
     letter-spacing 3px
+
+  .hidden-img
+    width 160px
 
 @media (min-width $xxl)
   .products

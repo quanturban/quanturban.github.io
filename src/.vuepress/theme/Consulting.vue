@@ -13,7 +13,9 @@
         </header>
         <p class="desc">{{ card.desc }}</p>
         <p class="feedback">
-          <span class="icon-star">&#10024;</span>
+          <span class="icon-star">
+            <img :src="$withBase('/stars.png')" alt="stars">
+          </span>
           {{ card.highlight }}
         </p>
         <footer class="footer">
@@ -104,6 +106,7 @@ export default {
 .icon-star
   margin-right 20px
   font-size 20px
+  flex 1 0 20px
 
 .footer
   padding-left 20px
@@ -159,6 +162,7 @@ export default {
     flex 0 1 420px
     min-height 630px
     margin-bottom 40px
+    margin-right 12px
 
   .card + .card
     margin-top 0
@@ -169,7 +173,7 @@ export default {
   .card-list
     display flex
     align-items center
-    justify-content space-between
+    justify-content center
     flex-wrap wrap
 
   .sub
@@ -182,4 +186,18 @@ export default {
 
   .feedback
     margin-top 10px
+
+@media (min-width $lg)
+  .card
+    margin-right 0
+
+  .card:nth-child(odd)
+    margin-right 40px
+
+@media (min-width $xl)
+  .card-list
+    justify-content space-between
+
+  .card:nth-child(odd)
+    margin-right 0
 </style>

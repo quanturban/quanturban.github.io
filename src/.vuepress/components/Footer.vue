@@ -49,7 +49,8 @@ export default {
   color #fff
   border-top 1px solid rgba(255, 255, 255, 0.2)
   height 110px
-  padding 30px 20px 20px
+  padding-left: 20px
+  padding-right: 20px
 
 .block
   display flex
@@ -106,6 +107,7 @@ export default {
   line-height 1.6
 
 .hidden-img
+  box-shadow 0px 12px 20px rgba(0, 0, 0, 0.5), 0px -4px 12px rgba(0, 0, 0, 0.5)
   position absolute
   bottom 30px
   left 50%

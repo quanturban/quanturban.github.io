@@ -15,6 +15,7 @@ products:
     desc: 小区品质评测工具
     img: /product-luopan.png
     qr: /luopan-qr.jpg
+    qrText: 微信扫码体验小程序
   - title: 数据市场
     name: 数据市场
     desc: 优质城市数据供给平台

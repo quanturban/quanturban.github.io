@@ -75,13 +75,29 @@ export default {
   data () {
     return {
       submitted: false,
-      formData: {}
+      formData: {},
+      storageObject: null
     }
   },
   computed: {
     data () {
       return this.$frontmatter
+    },
+    config () {
+      return this.$themeConfig
     }
+  },
+  watch: {
+    submitted (val) {
+      if (val) {
+        this.formData = {}
+      }
+    }
+  },
+  mounted () {
+    window.AV.init(this.config.LC.appId, this.config.LC.appKey)
+    const StorageObject = window.AV.Object.extend(this.config.LC.className)
+    this.storageObject = new StorageObject()
   },
   methods: {
     scrollToTop () {
@@ -91,9 +107,24 @@ export default {
       })
     },
     submit () {
-      console.log(this.formData)
-      this.submitted = true
-      this.scrollToTop()
+      const { formData, storageObject } = this
+      if (formData.type && formData.name && formData.contact && formData.content) {
+        storageObject.set('type', formData.type)
+        storageObject.set('name', formData.name)
+        storageObject.set('contact', formData.contact)
+        storageObject.set('content', formData.content)
+
+        storageObject.save().then(() => {
+          this.submitted = true
+          this.scrollToTop()
+          const StorageObject = window.AV.Object.extend(this.config.LC.className)
+          this.storageObject = new StorageObject()
+        }).catch(err => {
+          alert(err)
+        })
+      } else {
+        alert('error')
+      }
     },
     back () {
       this.submitted = false
@@ -222,7 +253,7 @@ $color2 = #DDEEFC
 .subtitle
   color #95A2B3
   font-size 17px
-  font-weight 300
+  font-weight 400
   margin-bottom 40px
 
 .contact-item
