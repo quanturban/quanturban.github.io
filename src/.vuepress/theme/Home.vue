@@ -90,7 +90,7 @@ export default {
 .products
   margin-top 60px
   padding-top 310px
-  background url($baseUrl + 'home-bg-mobile.png') no-repeat top center
+  background url('https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/home-bg-mobile.png') no-repeat top center
   background-size 168px
 
 .card

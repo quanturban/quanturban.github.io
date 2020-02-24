@@ -61,7 +61,7 @@ body
 
 @media (min-width $xl)
   .page-layout.Home
-    background-image url($baseUrl + 'home-bg.png')
+    background-image url('https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/home-bg.png')
     background-repeat no-repeat
     background-position top center
     background-size 900px
@@ -76,7 +76,7 @@ body
     margin-right auto
 
   .page-layout.Home
-    background-image url($baseUrl + 'home-bg.png')
+    background-image url('https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/home-bg.png')
     background-repeat no-repeat
     background-position top center
     background-size 1000px

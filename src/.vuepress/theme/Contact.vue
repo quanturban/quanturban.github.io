@@ -21,7 +21,7 @@
         </div>
         <div class="form-row">
           <label for="contact" class="label">联系方式</label>
-          <input v-model="formData['contact']" type="text" name="contact" class="input" required>
+          <input v-model="formData['contact']" placeholder="如需回复，请留下你的手机号或邮箱" type="text" name="contact" class="input" required>
         </div>
         <div class="form-row">
           <label for="content" class="label">内容</label>
@@ -55,6 +55,7 @@
         </li>
       </ul>
     </div>
+    <div class="message" :class="{fade: isMessageShow}">{{ message }}</div>
   </div>
 </template>
 
@@ -76,7 +77,9 @@ export default {
     return {
       submitted: false,
       formData: {},
-      storageObject: null
+      storageObject: null,
+      message: '出错了',
+      isMessageShow: false
     }
   },
   computed: {
@@ -95,7 +98,10 @@ export default {
     }
   },
   mounted () {
-    window.AV.init(this.config.LC.appId, this.config.LC.appKey)
+    if (!window.isAvInitialized) {
+      window.AV.init(this.config.LC.appId, this.config.LC.appKey)
+      window.isAvInitialized = true
+    }
     const StorageObject = window.AV.Object.extend(this.config.LC.className)
     this.storageObject = new StorageObject()
   },
@@ -119,16 +125,24 @@ export default {
           this.scrollToTop()
           const StorageObject = window.AV.Object.extend(this.config.LC.className)
           this.storageObject = new StorageObject()
-        }).catch(err => {
-          alert(err)
+        }).catch(() => {
+          this.showMessage('出错了，请刷新后重试。')
         })
       } else {
-        alert('error')
+        this.showMessage('请将信息填写完整。')
       }
     },
     back () {
       this.submitted = false
       this.scrollToTop()
+    },
+    showMessage (message) {
+      this.isMessageShow = true
+      this.message = message
+
+      setTimeout(() => {
+        this.isMessageShow = false
+      }, 2000)
     }
   }
 }
@@ -175,6 +189,7 @@ $color2 = #DDEEFC
 .input::placeholder
 .textarea::placeholder
   color #999
+  font-size 14px
 
 .input:focus
 .textarea:focus
@@ -301,6 +316,23 @@ $color2 = #DDEEFC
 
 .back-btn:hover
   background linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), $color2
+
+.message
+  position fixed
+  padding 12px 18px
+  z-index 9
+  top -40px
+  left 50%
+  transform translateX(-50%)
+  background-color #fef0f0
+  border 1px solid #fef0f0
+  border-radius 4px
+  color #f56c6c
+  transition top .3s
+  word-break keep-all
+
+.message.fade
+  top 20px
 
 @media (min-width $lg)
   .main

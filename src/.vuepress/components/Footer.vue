@@ -51,6 +51,7 @@ export default {
   height 110px
   padding-left: 20px
   padding-right: 20px
+  padding-top: 30px
 
 .block
   display flex
@@ -120,6 +121,7 @@ export default {
   .footer
     padding-left 60px
     padding-right 60px
+    padding-top: 0
     height 89px
     display flex
     align-items center

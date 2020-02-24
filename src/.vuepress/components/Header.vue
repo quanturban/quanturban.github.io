@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <router-link class="logo" to="/">
-      <img class="logo-img" :src="$withBase('/logo-v1.png')" alt="Quanturban">
+      <img class="logo-img" :src="$withBase(config.logo)" alt="Quanturban">
     </router-link>
     <nav class="nav">
       <ul class="nav-list">
@@ -24,6 +24,11 @@
 
 <script>
 export default {
+  computed: {
+    config () {
+      return this.$themeConfig
+    }
+  },
   methods: {
     isActive (url) {
       return this.$route.path === url

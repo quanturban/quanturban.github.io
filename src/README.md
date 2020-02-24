@@ -8,22 +8,22 @@ products:
   - title: 地图喵
     name: 地图喵
     desc: 地产数据云平台
-    img: /product-mapmiao.png
+    img: https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/product-mapmiao.png
     href: https://mapmiao.com/
   - title: 小区罗盘
     name: 小区罗盘
     desc: 小区品质评测工具
-    img: /product-luopan.png
-    qr: /luopan-qr.jpg
+    img: https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/product-luopan.png
+    qr: https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/luopan-qr.jpg
     qrText: 微信扫码体验小程序
   - title: 数据市场
     name: 数据市场
     desc: 优质城市数据供给平台
-    img: /product-data-market.png
+    img: https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/product-data-market.png
     href: https://data.mapmiao.com/
   - title: 疫情地图
     name: 疫情场所地图
     desc: 小区级城市疫情地图
-    img: /product-ncov-map.png
+    img: https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/product-ncov-map.png
     href: https://mapmiao.com/ncov/
 ---
