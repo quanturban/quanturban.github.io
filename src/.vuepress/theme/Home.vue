@@ -195,7 +195,7 @@ export default {
     padding-left 40px
 
   .text
-    width 420px
+    width 510px
 
   .products
     background none
