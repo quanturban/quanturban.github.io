@@ -113,9 +113,6 @@ export default {
   transition all .3s
   opacity 0.75
 
-.icon:hover .hidden-img
-  display block
-
 .icon:hover .icon-img
   opacity 1
 
@@ -162,6 +159,10 @@ export default {
 
   .copyright
     padding-left 20px
+
+@media (min-width $xl)
+  .icon:hover .hidden-img
+    display block
 
 @media (min-width $xxl)
   .footer
