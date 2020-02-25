@@ -1,5 +1,8 @@
 <template>
   <div class="page-layout" :class="page.name">
+    <div class="hidden-logo">
+      <img :src="config.logoWhite" alt="logo">
+    </div>
     <Header />
     <component :is="page" class="page" />
     <Footer />
@@ -31,6 +34,9 @@ export default {
     data () {
       return this.$frontmatter
     },
+    config () {
+      return this.$themeConfig
+    },
     page () {
       const page = this.$frontmatter.page
 
@@ -58,6 +64,9 @@ body
 
 .page-layout
   color #fff
+
+.hidden-logo
+  display none
 
 @media (min-width $xl)
   .page-layout.Home

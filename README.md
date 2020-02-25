@@ -8,7 +8,7 @@ QuantUrban Website
 
 > Add .env file in your local
 
-`$ yarn i`
+`$ yarn`
 
 `$ yarn start`
 

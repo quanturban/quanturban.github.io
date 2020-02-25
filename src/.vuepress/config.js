@@ -16,6 +16,7 @@ module.exports = {
   },
   themeConfig: {
     logo: 'https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/logo.png',
+    logoWhite: 'https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/logo-white.png',
     copyright: 'Copyright 2017-2020 QuantUrban | 京ICP备17019839号-2',
     LC: {
       appId: 'fmzYEOtdMGmDKf10FSq3GAP3-gzGzoHsz',

@@ -69,6 +69,8 @@ export default {
 .bg
   text-align center
   min-height 200px
+  border-top-left-radius 8px
+  border-top-right-radius 8px
 
 .bg-img
   border-top-left-radius 8px
@@ -106,7 +108,7 @@ export default {
 .icon-star
   margin-right 20px
   font-size 20px
-  flex 1 0 20px
+  flex 0 0 20px
 
 .footer
   padding-left 20px

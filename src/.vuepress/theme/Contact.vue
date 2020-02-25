@@ -21,7 +21,7 @@
         </div>
         <div class="form-row">
           <label for="contact" class="label">联系方式</label>
-          <input v-model="formData['contact']" placeholder="如需回复，请留下你的手机号或邮箱" type="text" name="contact" class="input" required>
+          <input v-model="formData['contact']" placeholder="请填写您的手机号或邮箱" type="text" name="contact" class="input" required>
         </div>
         <div class="form-row">
           <label for="content" class="label">内容</label>
@@ -181,7 +181,7 @@ $color2 = #DDEEFC
   border-radius: 4px
   color #fff
   width 100%
-  padding 16px 20px
+  padding 16px 20px 15px 20px
   outline none
   border 1px solid transparent
   transition all .3s
