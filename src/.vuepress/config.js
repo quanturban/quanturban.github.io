@@ -1,13 +1,22 @@
 require('dotenv').config()
 
+const defaultTitle = '量城科技 - 城市数据产品与决策咨询'
+const description = '量城科技专注于城市数据价值挖掘和协作工具打造，为房地产企业和政府提供数据服务与决策支持，提升城市和企业的精细化服务水平和运行效率。'
+const logoWhiteUrl = 'https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/logo-white.jpg'
+
 module.exports = {
   base: '/',
-  title: '量城科技 - 城市数据产品与决策咨询',
-  description: '量城科技专注于城市数据价值挖掘和协作工具打造，为房地产企业和政府提供数据服务与决策支持，提升城市和企业的精细化服务水平和运行效率。',
+  title: defaultTitle,
+  description: description,
   head: [
-    ['meta', { name: 'keywords', content: '量城科技, 城市数据, 地产数据, 房地产咨询, 城市研究，地图喵, 年鉴汪, 小区罗盘, 疫情场所地图'}],
     ['link', { rel: 'icon', type: 'image/x-icon', href: 'https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/favicon.ico'}],
-    ['script', { src: `https://cdn.jsdelivr.net/npm/leancloud-storage@3.15.0/dist/av-min.js` }]
+    ['script', { src: `https://cdn.jsdelivr.net/npm/leancloud-storage@3.15.0/dist/av-min.js` }],
+    ['meta', { name: 'keywords', content: '量城科技, 城市数据, 地产数据, 房地产咨询, 城市研究，地图喵, 年鉴汪, 小区罗盘, 疫情场所地图'}],
+    ['meta', { property: 'og:title', content: defaultTitle }],
+    ['meta', { property: 'og:description', content: description }],
+    ['meta', { property: 'og:image', content: logoWhiteUrl}],
+    ['meta', { property: 'og:type', content: 'website'}],
+    ['meta', { property: 'og:site_name', content: '量城科技' }]
   ],
   locales: {
     '/': {
@@ -16,7 +25,7 @@ module.exports = {
   },
   themeConfig: {
     logo: 'https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/logo.png',
-    logoWhite: 'https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/logo-white.png',
+    logoWhite: logoWhiteUrl,
     copyright: 'Copyright 2017-2020 QuantUrban | 京ICP备17019839号-2',
     LC: {
       appId: 'fmzYEOtdMGmDKf10FSq3GAP3-gzGzoHsz',
