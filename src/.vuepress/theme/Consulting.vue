@@ -73,6 +73,7 @@ export default {
   border-top-right-radius 8px
 
 .bg-img
+  display block
   border-top-left-radius 8px
   border-top-right-radius 8px
 
