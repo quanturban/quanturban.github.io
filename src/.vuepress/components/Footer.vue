@@ -7,14 +7,20 @@
       </div>
       <div class="right">
         <a
-          v-for="item in config.socialMedias"
+          v-for="(item, index) in config.socialMedias"
           :key="item.name"
           :href="item.href"
           class="icon"
           target="_blank"
         >
-          <img :src="$withBase(item.icon)" :alt="item.name" class="icon-img">
-          <img v-if="item.img" :src="$withBase(item.img)" :alt="item.name" class="hidden-img">
+          <img :src="$withBase(item.icon)" :alt="item.name" class="icon-img" @click="showImage(index)">
+          <img
+            v-if="item.img"
+            :src="$withBase(item.img)"
+            :alt="item.name"
+            class="hidden-img"
+            :class="{show: showImages.indexOf(index) !== -1}"
+          >
         </a>
       </div>
     </div>
@@ -30,12 +36,27 @@ export default {
   components: {
     Logo
   },
+  data () {
+    return {
+      showImages: []
+    }
+  },
   computed: {
     data () {
       return this.$frontmatter
     },
     config () {
       return this.$themeConfig
+    }
+  },
+  methods: {
+    showImage (index) {
+      if (this.showImages.indexOf(index) !== -1) {
+        const imageIndex = this.showImages.indexOf(index)
+        this.showImages.splice(imageIndex, 1)
+      } else {
+        this.showImages.push(index)
+      }
     }
   }
 }
@@ -116,6 +137,9 @@ export default {
   max-width initial
   width 160px
   display none
+
+.hidden-img.show
+  display block
 
 @media (min-width $md)
   .footer
