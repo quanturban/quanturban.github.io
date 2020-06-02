@@ -19,6 +19,7 @@ cards:
     type: 自主研究课题
     desc: 产业园区是经济发展的载体，也是支撑企业主体发展的重要平台。研究围绕粤港澳大湾区157个产业园区发展情况，从区位、成本、产业、创新、政策等角度进行了全方位评价。
     highlight: 基于产业大数据，提出了一套从微观角度对产业园区发展的评价模型，建立了大湾区产业数据库。
+    href: https://parkfig.mapmiao.com/
   - title: 创新空间发展规划
     img: https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/p-4.jpg
     type: 政府客户委托
