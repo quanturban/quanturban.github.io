@@ -119,6 +119,7 @@ export default {
 
 .img-wrap
   min-height 200px
+  max-height 240px
   overflow hidden
   position relative
 
