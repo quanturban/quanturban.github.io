@@ -10,6 +10,11 @@ products:
     desc: 地产数据云平台
     img: https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/product-mapmiao.png
     href: https://mapmiao.com/
+  - title: 城市地图
+    name: 城市地图
+    desc: 城市地图云平台
+    img: https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/product-citymap.png
+    href: https://quanturban.com/citymap
   - title: 小区罗盘
     name: 小区罗盘
     desc: 小区品质评测工具
@@ -21,9 +26,4 @@ products:
     desc: 优质城市数据供给平台
     img: https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/product-data-market.png
     href: https://data.mapmiao.com/
-  - title: 疫情地图
-    name: 疫情场所地图
-    desc: 小区级城市疫情地图
-    img: https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/product-ncov-map.png
-    href: https://mapmiao.com/ncov/
 ---
