@@ -20,7 +20,7 @@ jobs:
           LC_APP_KEY=${{ secrets.LC_APP_KEY }} yarn build
           
       - name: Install SSH Client
-        uses: webfactory/ssh-agent@v0.2.0
+        uses: webfactory/ssh-agent@v0.4.1
         with:
           ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
