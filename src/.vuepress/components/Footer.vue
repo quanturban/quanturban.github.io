@@ -25,7 +25,11 @@
       </div>
     </div>
     <div class="block copyright">
-      {{ config.copyright }}
+      <span>{{ config.copyright + ' | ' }}</span>
+      <a href="https://beian.miit.gov.cn/"
+         target="_blank"
+         rel="noopener noreferrer"
+      >{{ config.ICPLicense }}</a>
     </div>
   </footer>
 </template>
@@ -120,10 +124,20 @@ export default {
   margin-top 20px
 
 .copyright
-  opacity 0.75
   font-size 11px
   justify-content center
   line-height 1.6
+  white-space pre-wrap
+
+.copyright span
+  opacity 0.75
+
+.copyright a
+  opacity 0.75
+  color unset
+
+.copyright a:hover
+  opacity 1
 
 .hidden-img
   box-shadow 0px 12px 20px rgba(0, 0, 0, 0.5), 0px -4px 12px rgba(0, 0, 0, 0.5)
