@@ -3,6 +3,21 @@ layout: PageLayout
 page: Consulting
 title: 咨询项目
 cards:
+  - title: 国土空间规划大数据专题
+    type: 企业客户委托
+    img: https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/p-7.jpg
+    desc: 基于各类城市数据，针对研究地区的人口分布、人口通勤和流动、区域产业关联、产业空间分布、房地产市场发展、区域交通、城市公共服务设施、文化旅游发展等方面进行分析，精准识别当前发展现状和问题，提出相应的城市空间供给与改善建议。
+    highlight: 探索出一套利用LBS数据、企业工商注册数据、城市POI数据、二手房数据等城市大数据支撑国土空间规划编制的有效方法。 
+  - title: 国土空间规划产业发展专题
+    type: 企业客户委托
+    img: https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/p-8.jpg
+    desc: 结合各类产业数据和相关规划，对研究区域的产业发展现状问题和未来发展机遇进行研判，结合城市产业发展的比较优势，确定未来产业发展方向和重点产业发展策略，提出产业转型提升和产业空间优化布局建议。
+    highlight: 基于企业工商注册数据和研究区域的产业调研数据，提出区域产业优势研判、产业空间特征识别、产业投资联系分析、产业园区空间绩效评估等一系列支撑产业转型升级的研究方法。
+  - title: 港产城融合发展专题
+    type: 企业客户委托
+    img: https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/p-9.jpg
+    desc: 九江市是因港而起，未来也将因港而兴的城市，港产城融合发展是充分发挥港口资源、产业园区、城市功能正向交互的重要手段。研究在明确九江市港口发展现状和目标的基础上，通过同类港口对比、多维度”港产融合-港城融合-产城融合”联动关系分析等方法，提出九江市港产城融合发展的重要目标和关键举措。
+    highlight: 基于港口、产业和城市相关现状数据和上位规划的政策要求，从定性和定量两个角度评估城市港产融合、港城融合和产城融合的水平，并提出未来城市港产城发展格局建议。
   - title: 土地价值潜力预测
     img: https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/p-1.jpg
     type: 企业客户委托
