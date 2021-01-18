@@ -105,6 +105,7 @@ export default {
   padding-left 20px
   padding-right 20px
   display flex
+  margin-bottom 10px
 
 .icon-star
   margin-right 20px
@@ -175,7 +176,6 @@ export default {
 
   .card-list
     display flex
-    align-items center
     justify-content center
     flex-wrap wrap
 
