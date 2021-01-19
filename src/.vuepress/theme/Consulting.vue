@@ -68,7 +68,8 @@ export default {
 
 .bg
   text-align center
-  min-height 200px
+  height: auto
+  overflow hidden
   border-top-left-radius 8px
   border-top-right-radius 8px
 
@@ -97,6 +98,7 @@ export default {
   font-size 14px
   color rgba(235, 235, 245, 0.6)
   padding 20px
+  min-height 185px
 
 .feedback
   font-size 14px
@@ -189,6 +191,9 @@ export default {
 
   .feedback
     margin-top 10px
+
+  .bg
+    height: 260px
 
 @media (min-width $lg)
   .card
