@@ -98,7 +98,7 @@ export default {
   font-size 14px
   color rgba(235, 235, 245, 0.6)
   padding 20px
-  min-height 185px
+  min-height 120px
 
 .feedback
   font-size 14px
@@ -188,9 +188,6 @@ export default {
 
   .type
     color #5486EE
-
-  .feedback
-    margin-top 10px
 
   .bg
     height: 260px
