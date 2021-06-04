@@ -17,11 +17,7 @@ contact:
     name: 邮箱
     value: contact@quanturban.com
   - type: location
-    name: 北京办公室地址
-    value: 北京市海淀区中关村东路66号世纪科贸大厦B座
-    href: https://www.amap.com/place/B0FFFWF8ND
-  - type: location
-    name: 深圳办公室地址
-    value: 深圳市南山区蛇口工业三路1号招商局港口大厦
-    href: https://www.amap.com/place/B0FFHTNUBV
+    name: 办公室地址
+    value: 深圳市南山区后海航天科技广场B座
+    href: https://ditu.amap.com/place/B0FFM1FERS
 ---
