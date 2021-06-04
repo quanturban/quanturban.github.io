@@ -10,9 +10,9 @@ products:
     desc: 地产数据云平台
     img: https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/product-mapmiao.png
     href: https://mapmiao.com/
-  - title: 城市地图
-    name: 城市地图
-    desc: 城市地图云平台
+  - title: 投研数智云
+    name: 投研数智云
+    desc: 集中供地研判提效神器
     img: https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/product-citymap.png
     href: https://quanturban.com/citymap
   - title: 小区罗盘
