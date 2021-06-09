@@ -20,6 +20,6 @@ node {
 		sh 'ssh root@39.103.195.18 "(for i in {1..10}; do sudo docker pull registry.cn-hongkong.aliyuncs.com/quanturban/web:latest && s=0 && break || s=\\$? && sleep 5; done; exit \\$s)"'
 		sh 'ssh root@39.103.195.18 "sudo docker stop web && sudo docker rm web || true"'
 		sh 'sleep 2'
-		sh 'ssh root@39.103.195.18 "sudo docker run --name web --network citymap -d --restart unless-stopped registry.cn-hongkong.aliyuncs.com/quanturban/web:latest'
+		sh 'ssh root@39.103.195.18 "sudo docker run --name web --network citymap -d --restart unless-stopped registry.cn-hongkong.aliyuncs.com/quanturban/web:latest"'
 	}
 }
