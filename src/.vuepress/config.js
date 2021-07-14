@@ -10,6 +10,15 @@ module.exports = {
   description: description,
   head: [
     ['link', { rel: 'icon', type: 'image/x-icon', href: 'https://quanturban-web.oss-cn-shenzhen.aliyuncs.com/images/favicon.ico'}],
+    ['script', {}, `
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement(“script”);
+        hm.src = “https://hm.baidu.com/hm.js?8b41793f8697de20f4bb17a5c2431fd0”;
+        var s = document.getElementsByTagName(“script”)[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    `],
     ['script', { src: `https://cdn.jsdelivr.net/npm/leancloud-storage@3.15.0/dist/av-min.js` }],
     ['meta', { name: 'keywords', content: '量城科技, 城市数据, 地产数据, 房地产咨询, 城市研究，地图喵, 年鉴汪, 小区罗盘, 疫情场所地图'}],
     ['meta', { property: 'og:title', content: defaultTitle }],
